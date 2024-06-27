@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    >
+    <!--android:animateLayoutChanges="true" -> Que exista una animacion
+        app:cardCornerRadius="20dp" -> Para el radio de las esquinas
+        app:cardElevation="4dp" -> Para darle relieve
+        app:cardUseCompatPadding="true" -> Establece un relleno compatible al carview
+    -->
+    <!-- Añadimos los elementos que van dentro de la carta -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        >
+        <!-- Añadimos un relativeLayout dentro del linearLayout -->
+        <RelativeLayout
+            android:id="@+id/relativePulsable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="6dp">
+            <!-- Añadimos un imageView dentro del relativeLayout -->
+            <ImageView
+                android:id="@+id/imagenArticulo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:clickable="true"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:scaleType="centerCrop"/>
+            <!-- Añadimos un linearLayout dentro del relativeLayout -->
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/imagenArticulo"
+                android:layout_toRightOf="@+id/imagenArticulo"
+                android:orientation="vertical">
+
+                <!-- Añadimos unos textView dentro del linearLayout -->
+                <TextView
+                    android:id="@+id/textNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="Nombre"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textPrecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Precio"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/imagenArticulo"
+                android:layout_toRightOf="@+id/imagenArticulo"
+                android:orientation="vertical">
+
+                <!-- Añadimos unos textView dentro del linearLayout -->
+                <TextView
+                    android:id="@+id/espacio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fechaConvocado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
